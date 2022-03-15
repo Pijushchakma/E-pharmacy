@@ -1,0 +1,32 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+<div class="sidenav">
+  <div class="login-main-text">
+    <h1>E-Pharmacy<br> Login Page</h1>
+    <p>Login to get your emergency medicines</p>
+  </div>
+</div>
+<div class="main">
+  <div class="col-md-6 col-sm-12">
+    <div class="login-form">
+      <form>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="text" class="form-control" placeholder="Email" [(ngModel)]="email" name="email" autofocus>
+
+        </div>
+        <div class="form-group">
+          <label>Password</label>
+          <input type="password" class="form-control" placeholder="Password" [(ngModel)]="password" name="password" autofocus>
+        </div>
+        <button (click)=checkLogin() class="btn btn-black btn-success"> <b>Login</b></button>
+        <div class="form-group">
+
+          <a href="#" class="btnForgetPwd" value="Login">Forget Password?</a>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+</div>

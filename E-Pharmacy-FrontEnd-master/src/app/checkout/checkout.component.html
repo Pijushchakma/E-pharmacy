@@ -1,0 +1,26 @@
+<div class="searchdiv bg-white btn-space">
+  <h1>Your Order </h1>
+  <div>
+    <h4 class="card-title">Order ID: {{ order.id }}</h4>
+    <p class="card-text">Username: {{ username }}</p>
+    <p class="card-text">Phone: {{ order.phone }}</p>
+    <p class="card-text">Location: {{ order.location }}</p>
+
+  </div>
+
+  <div class="row" >
+    <h2> Ordered Medicines</h2>
+    <ng-container *ngFor="let medicine of medicines; let i = index" class="results">
+      <div class="col">
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h4 class="card-title">{{ medicine.name }}</h4>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="(i + 1)%3 == 0" class="w-100"></div>
+    </ng-container>
+  </div>
+  <p class="card-text">Total Price: {{ order.totalPrice | currency:'BDT':"৳" }}</p>
+  <a  class="btn btn-primary" (click)="clearCart()" routerLink="/home" > Back to Home </a>
+</div>
